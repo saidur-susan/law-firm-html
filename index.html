@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Firm Home</title>
+    <link rel="stylesheet" href="./assets/css/input.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="header-section max-w-[1440px] bg-black mx-auto">
+            <div class="container-large max-w-[1296px] mx-auto py-[20px] px-4">
+                <div class="flex justify-between items-center text-white">
+
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href=""><img src="./assets/img/Logo.png" width="110" alt="logo"></a>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <nav class="hidden md:block">
+                        <ul class="flex items-center gap-x-[40px] font-bold text-[16px]">
+                            <li><a class="hover:text-[#604B33]" href="">Home</a></li>
+                            <li><a class="hover:text-[#604B33]" href="">Services</a></li>
+                            <li><a class="hover:text-[#604B33]" href="">About us</a></li>
+                            <li><a class="hover:text-[#604B33]" href="">Contact us</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Phone -->
+                    <div class="hidden md:flex phone">
+                        <a class="flex items-center justify-end w-[180px] font-semibold gap-2" href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.3351 13.0994V15.5994C17.3361 15.8315 17.2886 16.0612 17.1956 16.2739C17.1026 16.4865 16.9662 16.6774 16.7952 16.8343C16.6242 16.9912 16.4223 17.1107 16.2024 17.185C15.9826 17.2594 15.7496 17.287 15.5185 17.2661C12.9542 16.9875 10.491 16.1112 8.32682 14.7078C6.31334 13.4283 4.60626 11.7212 3.32682 9.70776C1.91846 7.53377 1.04202 5.05859 0.768483 2.48276C0.747658 2.25232 0.775045 2.02006 0.8489 1.80078C0.922754 1.5815 1.04146 1.38 1.19745 1.20911C1.35345 1.03822 1.54332 0.901688 1.75498 0.808198C1.96663 0.714709 2.19543 0.666314 2.42682 0.666096H4.92682C5.33124 0.662116 5.72331 0.805329 6.02995 1.06904C6.33659 1.33275 6.53688 1.69897 6.59348 2.09943C6.699 2.89949 6.89469 3.68504 7.17682 4.4411C7.28894 4.73937 7.3132 5.06353 7.24674 5.37516C7.18027 5.6868 7.02587 5.97286 6.80182 6.19943L5.74348 7.25776C6.92978 9.34405 8.65719 11.0715 10.7435 12.2578L11.8018 11.1994C12.0284 10.9754 12.3144 10.821 12.6261 10.7545C12.9377 10.688 13.2619 10.7123 13.5601 10.8244C14.3162 11.1066 15.1018 11.3022 15.9018 11.4078C16.3066 11.4649 16.6763 11.6688 16.9406 11.9807C17.2049 12.2926 17.3453 12.6907 17.3351 13.0994Z"
+                                    fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>(257) 388-6895</span>
+                        </a>
+                    </div>
+
+                    <!-- Mobile Hamburger -->
+                    <button id="menu-btn" class="md:hidden flex flex-col gap-1">
+                        <span class="w-6 h-0.5 bg-white"></span>
+                        <span class="w-6 h-0.5 bg-white"></span>
+                        <span class="w-6 h-0.5 bg-white"></span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu (Hidden by default) -->
+                <div id="mobile-menu"
+                    class="hidden flex-col text-center gap-4 mt-4 text-white font-bold text-lg md:hidden">
+                    <a href="" class="hover:text-[#604B33]">Home</a>
+                    <a href="" class="hover:text-[#604B33]">Services</a>
+                    <a href="" class="hover:text-[#604B33]">About us</a>
+                    <a href="" class="hover:text-[#604B33]">Contact us</a>
+                    <a href="tel:2573886895" class="justify-center flex items-center gap-2 hover:text-[#604B33]">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.3351 13.0994V15.5994C17.3361 15.8315 17.2886 16.0612 17.1956 16.2739C17.1026 16.4865 16.9662 16.6774 16.7952 16.8343C16.6242 16.9912 16.4223 17.1107 16.2024 17.185C15.9826 17.2594 15.7496 17.287 15.5185 17.2661C12.9542 16.9875 10.491 16.1112 8.32682 14.7078C6.31334 13.4283 4.60626 11.7212 3.32682 9.70776C1.91846 7.53377 1.04202 5.05859 0.768483 2.48276C0.747658 2.25232 0.775045 2.02006 0.8489 1.80078C0.922754 1.5815 1.04146 1.38 1.19745 1.20911C1.35345 1.03822 1.54332 0.901688 1.75498 0.808198C1.96663 0.714709 2.19543 0.666314 2.42682 0.666096H4.92682C5.33124 0.662116 5.72331 0.805329 6.02995 1.06904C6.33659 1.33275 6.53688 1.69897 6.59348 2.09943C6.699 2.89949 6.89469 3.68504 7.17682 4.4411C7.28894 4.73937 7.3132 5.06353 7.24674 5.37516C7.18027 5.6868 7.02587 5.97286 6.80182 6.19943L5.74348 7.25776C6.92978 9.34405 8.65719 11.0715 10.7435 12.2578L11.8018 11.1994C12.0284 10.9754 12.3144 10.821 12.6261 10.7545C12.9377 10.688 13.2619 10.7123 13.5601 10.8244C14.3162 11.1066 15.1018 11.3022 15.9018 11.4078C16.3066 11.4649 16.6763 11.6688 16.9406 11.9807C17.2049 12.2926 17.3453 12.6907 17.3351 13.0994Z"
+                                fill="white" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>(257) 388-6895</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+
+
+    <!-- Hero Section Start Here -->
+    <div class="hero-section max-w-[1440px] mx-auto ">
+        <div class=" bg-black ">
+            <div class="flex flex-col items-center text-white text-center max-w-[882px] mx-auto">
+                <h1 class="text-[40px] font-bold uppercase mulish mt-[100px] mb-[20px]">Legal solutions for business and
+                    individual needs</h1>
+                <p class="text-[16px] inter font-semibold px-2">Pretium purus feugiat volutpat pellenteotenti porta
+                    mauris
+                    nec vulputate. Massa sagittis lectus montes vel sit. Faucibus odio in ut massa in integer ultrices
+                    lacus est. Tempus ultrices placerat tellus morbi.</p>
+                <a class="py-3 px-8 bg-[#604B33] hover:bg-[#605B33] flex justify-center items-center mb-[190px] mt-[100px] font-bold mulish text-[20px]"
+                    href="">Make enquiry</a>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="container-small bg-white mx-auto relative -top-25 z-2">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-x-10 p-[90px]">
+                <div class="flex flex-col max-w-[530px] mx-auto">
+                    <h1 class="text-[40px] text-[#604B33] font-bold mulish my-4">Trusted legal partnerships</h1>
+                    <p class="text-[20px] text-black inter my-4">Adipiscing nam neque hendrerit nec pellentesque diam a.
+                        Varius quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat pellentesque.
+                        Potenti porta mauris nec vulputate.</p>
+                    <div class="sign">
+                        <img src="./assets/img/sign.png" alt="sign">
+                    </div>
+                </div>
+                <div class="hero-right-image flex justify-between items-center relative">
+
+                    <img src="./assets/img/Img+text.png" alt="">
+                    <p class="absolute ml-4 bottom-3 text-white z-3">Julio Jeffer</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section End Here -->
+
+
+
+
+
+    <!-- Img+text Section Start Here -->
+    <div class="img+text-section max-w-[1440px] mx-auto bg-[#FAF9F4] relative -mt-117">
+        <div class=" container-small pt-100 flex flex-row flex-wrap mx-auto pb-10">
+
+            <!-- Card -->
+            <div class="flex flex-col items-center text-center max-w-[280px] p-[20px] mx-auto">
+
+                <div class="icon">
+                    <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.90938 44.0003H42.0934C42.5334 44.0003 42.8934 43.6403 42.8934 43.2003V39.1203C42.8934 38.6803 42.5334 38.3203 42.0934 38.3203H6.90938C6.46937 38.3203 6.10938 38.6803 6.10938 39.1203V43.2003C6.10938 43.6403 6.46937 44.0003 6.90938 44.0003Z"
+                            fill="black" />
+                        <path
+                            d="M6.90938 18.2796H42.0934C42.5334 18.2796 42.8934 17.9276 42.8934 17.4796V13.3996C42.8934 12.9596 42.5334 12.5996 42.0934 12.5996H6.90938C6.46937 12.5996 6.10938 12.9596 6.10938 13.3996V17.4796C6.10938 17.9276 6.46937 18.2796 6.90938 18.2796Z"
+                            fill="black" />
+                        <path
+                            d="M38.9959 11L24.8519 4.07995C24.6279 3.97595 24.3719 3.97595 24.1479 4.07995L10.0039 11H38.9959Z"
+                            fill="black" />
+                        <path
+                            d="M16.5327 21.2089C16.9727 21.2089 17.3327 20.8489 17.3327 20.4089V19.8809H8.80469V20.4089C8.80469 20.8489 9.15669 21.2089 9.60469 21.2089H10.1887V35.3929H9.60469C9.15669 35.3929 8.80469 35.7529 8.80469 36.1929V36.7209H17.3327V36.1929C17.3327 35.7529 16.9727 35.3929 16.5327 35.3929H15.9487V21.2089H16.5327Z"
+                            fill="black" />
+                        <path
+                            d="M27.9624 21.2089C28.4024 21.2089 28.7624 20.8489 28.7624 20.4089V19.8809H20.2344V20.4089C20.2344 20.8489 20.5944 21.2089 21.0344 21.2089H21.6184V35.3929H21.0344C20.5944 35.3929 20.2344 35.7529 20.2344 36.1929V36.7209H28.7624V36.1929C28.7624 35.7529 28.4024 35.3929 27.9624 35.3929H27.3784V21.2089H27.9624Z"
+                            fill="black" />
+                        <path
+                            d="M39.396 21.2089C39.836 21.2089 40.196 20.8489 40.196 20.4089V19.8809H31.668V20.4089C31.668 20.8489 32.028 21.2089 32.468 21.2089H33.052V35.3929H32.468C32.028 35.3929 31.668 35.7529 31.668 36.1929V36.7209H40.196V36.1929C40.196 35.7529 39.836 35.3929 39.396 35.3929H38.812V21.2089H39.396Z"
+                            fill="black" />
+                    </svg>
+
+                </div>
+
+                <h3 class="text-[20px] text-[#604B33] font-bold uppercase mulish my-[16px] ">Banking and Finance</h3>
+                <p class="text-[16px] inter text-black ">Adipiscing nam neque hendrerit nec pellentesque diam a. Varius
+                    quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat pellentesque. Potenti porta
+                    mauris nec vulputate. Massa sagittis lectus montes vel sit. Faucibus odio in ut massa in integer
+                    ultrices lacus est. Tempus ultrices placerat tellus morbi.</p>
+
+            </div>
+
+            <!-- Card -->
+            <div class="flex flex-col items-center text-center max-w-[280px] p-[20px] mx-auto">
+
+                <div class="icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.3203 21.9836H31.1923C30.4883 19.8076 28.8483 18.0396 26.7523 17.1676C27.9683 16.2556 28.7603 14.8076 28.7603 13.1756C28.7603 10.4236 26.5203 8.18359 23.7603 8.18359C21.0083 8.18359 18.7683 10.4236 18.7683 13.1756C18.7683 14.8076 19.5603 16.2556 20.7763 17.1676C18.6643 18.0316 17.0243 19.7996 16.3203 21.9836Z"
+                            fill="black" />
+                        <path
+                            d="M32.4464 18.824C32.1744 18.952 31.9104 19.104 31.6624 19.272C32.1024 19.952 32.4624 20.688 32.7184 21.488L32.8784 21.984H40.7424C40.1504 20.592 39.0624 19.472 37.7024 18.824C38.5344 18.088 39.0704 17.032 39.0704 15.832C39.0704 13.624 37.2784 11.832 35.0704 11.832C32.8624 11.832 31.0704 13.624 31.0704 15.832C31.0624 17.024 31.6064 18.088 32.4464 18.824Z"
+                            fill="black" />
+                        <path
+                            d="M14.801 21.488C15.057 20.688 15.417 19.952 15.857 19.272C15.609 19.104 15.345 18.952 15.073 18.824C15.905 18.088 16.449 17.024 16.449 15.832C16.449 13.624 14.657 11.832 12.449 11.832C10.241 11.832 8.44897 13.624 8.44897 15.832C8.44897 17.032 8.98497 18.088 9.82497 18.824C8.46497 19.472 7.37697 20.592 6.79297 21.984H14.649L14.801 21.488Z"
+                            fill="black" />
+                        <path
+                            d="M4.8 38.216C4.36 38.216 4 38.576 4 39.016C4 39.456 4.36 39.816 4.8 39.816H6.272H6.28H41.24H41.248H43.2C43.64 39.816 44 39.456 44 39.016C44 38.576 43.64 38.216 43.2 38.216H42.032V25.184H43.2C43.64 25.184 44 24.824 44 24.384C44 23.944 43.64 23.584 43.2 23.584H41.248C41.24 23.584 41.24 23.584 41.232 23.584H6.272C6.264 23.584 6.264 23.584 6.256 23.584H4.8C4.36 23.584 4 23.944 4 24.384C4 24.824 4.36 25.184 4.8 25.184H5.472V38.216H4.8ZM10.928 33.552H36.592C37.032 33.552 37.392 33.912 37.392 34.352C37.392 34.792 37.032 35.152 36.592 35.152H10.928C10.488 35.152 10.128 34.792 10.128 34.352C10.128 33.912 10.488 33.552 10.928 33.552ZM10.128 29.048C10.128 28.608 10.488 28.248 10.928 28.248H36.592C37.032 28.248 37.392 28.608 37.392 29.048C37.392 29.488 37.032 29.848 36.592 29.848H10.928C10.488 29.848 10.128 29.488 10.128 29.048Z"
+                            fill="black" />
+                    </svg>
+
+
+                </div>
+
+                <h3 class="text-[20px] text-[#604B33] font-bold uppercase mulish my-[16px] ">Family Law</h3>
+                <p class="text-[16px] inter text-black ">Adipiscing nam neque hendrerit nec pellentesque diam a. Varius
+                    quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat pellentesque. Potenti porta
+                    mauris nec vulputate. Massa sagittis lectus montes vel sit. Faucibus odio in ut massa in integer
+                    ultrices lacus est. Tempus ultrices placerat tellus morbi.</p>
+
+            </div>
+
+            <!-- Card -->
+            <div class="flex flex-col items-center text-center max-w-[280px] p-[20px] mx-auto">
+
+                <div class="icon">
+                    <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M35.3698 22.1122L26.3057 13.0482C26.0097 12.7522 25.4738 12.7522 25.1778 13.0482L21.5777 16.6482C21.2657 16.9602 21.2657 17.4722 21.5777 17.7842L30.6417 26.8402C30.7857 26.9922 30.9938 27.0802 31.2018 27.0802C31.4178 27.0802 31.6177 26.9922 31.7697 26.8402L35.3698 23.2482C35.6817 22.9282 35.6817 22.4242 35.3698 22.1122Z"
+                            fill="black" />
+                        <path
+                            d="M44.2421 12.9592C44.3861 12.8072 44.4741 12.6072 44.4741 12.3912C44.4741 12.1832 44.3861 11.9832 44.2421 11.8312L36.5941 4.18322C36.2741 3.87122 35.7701 3.87122 35.4581 4.18322L27.5781 12.0632L36.3541 20.8392L44.2421 12.9592Z"
+                            fill="black" />
+                        <path
+                            d="M32.3572 43.1438C32.3572 42.7038 31.9972 42.3438 31.5572 42.3438H21.9172C21.4772 42.3438 21.1172 42.7038 21.1172 43.1438C21.1172 43.5838 21.4772 43.9438 21.9172 43.9438H31.5572C31.9972 43.9438 32.3572 43.5838 32.3572 43.1438Z"
+                            fill="black" />
+                        <path
+                            d="M17.4346 32.6808C17.8986 32.2088 17.8986 31.4488 17.4346 30.9848C17.2026 30.7528 16.8906 30.6328 16.5866 30.6328C16.2826 30.6328 15.9706 30.7528 15.7386 30.9848C15.2746 31.4488 15.2746 32.2168 15.7386 32.6808C16.2026 33.1528 16.9626 33.1528 17.4346 32.6808Z"
+                            fill="black" />
+                        <path
+                            d="M14.1393 33.1601C13.5633 32.0961 13.7153 30.7521 14.6113 29.8561C15.6993 28.7681 17.4753 28.7681 18.5713 29.8561C19.6593 30.9441 19.6593 32.7201 18.5713 33.8161C18.0273 34.3601 17.3073 34.6321 16.5953 34.6321C16.1393 34.6321 15.6913 34.5121 15.2753 34.2881L5.98725 43.7041C6.49125 43.4721 6.99525 43.2481 7.49125 43.0481C7.47525 43.1201 7.45125 43.1841 7.45125 43.2561C7.45925 43.6961 7.81125 44.0481 8.25125 44.0481H8.25925L18.5953 43.9441C19.0353 43.9361 19.3953 43.5761 19.3873 43.1361C19.3793 42.6961 19.0273 42.3441 18.5873 42.3441H18.5793L9.09925 42.4401C16.0913 40.0001 21.8673 40.4961 21.9393 40.4961C22.3393 40.5281 22.6913 40.2881 22.7873 39.9041C24.0913 34.9681 26.9953 29.9521 28.7553 27.2001L21.2113 19.6641C18.4593 21.4161 13.4513 24.3201 8.51525 25.6241C8.13925 25.7281 7.88325 26.0881 7.92325 26.4721C7.93125 26.5521 8.61925 34.3441 4.56325 42.7921C4.54725 42.8321 4.53925 42.8721 4.53125 42.9121L14.1393 33.1601Z"
+                            fill="black" />
+                    </svg>
+
+
+                </div>
+
+                <h3 class="text-[20px] text-[#604B33] font-bold uppercase mulish my-[16px] ">Business Law</h3>
+                <p class="text-[16px] inter text-black ">Adipiscing nam neque hendrerit nec pellentesque diam a. Varius
+                    quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat pellentesque. Potenti porta
+                    mauris nec vulputate. Massa sagittis lectus montes vel sit. Faucibus odio in ut massa in integer
+                    ultrices lacus est. Tempus ultrices placerat tellus morbi.</p>
+
+            </div>
+
+            <!-- Card -->
+            <div class="flex flex-col items-center text-center max-w-[280px] p-[20px] mx-auto">
+
+                <div class="icon">
+                    <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M26.8191 21.1928C25.7791 21.0248 24.9951 20.4968 24.4991 20.0488C23.9951 20.5048 23.2191 21.0248 22.1791 21.1928C20.9151 21.3928 19.5951 21.0408 18.2431 20.1368L16.3711 22.4808C17.1951 23.1928 18.3951 24.5928 18.2111 26.6088C18.1711 27.0888 18.0191 27.6248 17.8671 28.1848C17.4751 29.5928 17.0351 31.1848 17.8991 32.6888C18.7951 34.2568 21.0191 35.5288 24.5071 36.4808C27.9951 35.5288 30.2191 34.2568 31.1151 32.6888C31.9791 31.1848 31.5391 29.5928 31.1471 28.1848C30.9951 27.6168 30.8431 27.0888 30.8031 26.6088C30.6191 24.5928 31.8191 23.1928 32.6431 22.4808L30.7711 20.1368C29.4111 21.0408 28.0831 21.3928 26.8191 21.1928Z"
+                            fill="black" />
+                        <path
+                            d="M24.9966 27.168L24.5006 26.168L24.0126 27.168C23.8926 27.4 23.6686 27.568 23.4126 27.608L22.3086 27.768L23.1086 28.544C23.2926 28.728 23.3806 28.992 23.3406 29.256L23.1566 30.352L24.1406 29.832C24.2526 29.768 24.3886 29.744 24.5086 29.744C24.6366 29.744 24.7646 29.776 24.8846 29.832L25.8686 30.352L25.6766 29.256C25.6366 29 25.7166 28.728 25.9086 28.544L26.7086 27.768L25.6046 27.608C25.3326 27.568 25.1086 27.4 24.9966 27.168Z"
+                            fill="black" />
+                        <path
+                            d="M43.2123 24.312C43.4203 24.312 43.6203 24.232 43.7803 24.08C44.0923 23.76 44.0923 23.2561 43.7803 22.944L41.6203 20.784L37.2923 16.456V4.80005C37.2923 4.35205 36.9323 4.00005 36.4923 4.00005H31.0043C30.5643 4.00005 30.2043 4.35205 30.2043 4.80005V9.36805L25.0683 4.23205C24.7563 3.92005 24.2443 3.92005 23.9323 4.23205L7.41228 20.752C7.39628 20.776 7.37228 20.8 7.34828 20.816L5.22828 22.944C4.90828 23.2561 4.90828 23.76 5.22828 24.08C5.54028 24.392 6.04428 24.392 6.35628 24.08L7.14828 23.288V38.376C7.14828 41.48 9.66828 44 12.7723 44H36.2363C39.3323 44 41.8523 41.48 41.8523 38.376V23.288L42.6443 24.08C42.8043 24.232 43.0043 24.312 43.2123 24.312ZM34.1803 23.32C34.1003 23.368 32.2123 24.5201 32.3883 26.4641C32.4203 26.8001 32.5483 27.2721 32.6843 27.76C33.1083 29.2961 33.6923 31.408 32.5003 33.488C31.3483 35.496 28.7963 37 24.7083 38.0881C24.6443 38.104 24.5723 38.112 24.5003 38.112C24.4283 38.112 24.3643 38.104 24.2923 38.0881C20.2043 37 17.6523 35.496 16.5003 33.488C15.3083 31.408 15.8843 29.3041 16.3163 27.76C16.4523 27.264 16.5803 26.8001 16.6123 26.4641C16.7883 24.5121 14.9003 23.36 14.8203 23.312C14.6203 23.192 14.4843 22.992 14.4443 22.768C14.4043 22.544 14.4603 22.304 14.6043 22.128L17.4683 18.536C17.7403 18.192 18.2443 18.136 18.5883 18.408C19.8043 19.368 20.9243 19.768 21.9243 19.608C23.1483 19.408 23.8283 18.424 23.8363 18.416C24.1323 17.968 24.8763 17.968 25.1723 18.416C25.1723 18.424 25.8683 19.424 27.1003 19.616C28.1003 19.768 29.2123 19.36 30.4203 18.408C30.7643 18.136 31.2683 18.192 31.5403 18.536L34.4043 22.128C34.5483 22.312 34.6043 22.544 34.5643 22.776C34.5163 23.008 34.3803 23.208 34.1803 23.32Z"
+                            fill="black" />
+                    </svg>
+
+
+                </div>
+
+                <h3 class="text-[20px] text-[#604B33] font-bold uppercase mulish my-[16px] ">Real Estate</h3>
+                <p class="text-[16px] inter text-black ">Adipiscing nam neque hendrerit nec pellentesque diam a. Varius
+                    quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat pellentesque. Potenti porta
+                    mauris nec vulputate. Massa sagittis lectus montes vel sit. Faucibus odio in ut massa in integer
+                    ultrices lacus est. Tempus ultrices placerat tellus morbi.</p>
+
+            </div>
+            <!-- Card End-->
+
+            <!-- Card -->
+            <div class="flex flex-col items-center text-center max-w-[280px] p-[20px] mx-auto">
+
+                <div class="icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32.7208 19.5684L30.4648 23.8644H34.9768L32.7208 19.5684Z" fill="black" />
+                        <path
+                            d="M15.281 27.4408C16.537 27.4408 17.601 26.6088 17.945 25.4648H12.625C12.969 26.6088 14.033 27.4408 15.281 27.4408Z"
+                            fill="black" />
+                        <path
+                            d="M32.7185 27.4408C33.9745 27.4408 35.0385 26.6088 35.3825 25.4648H30.0625C30.3985 26.6088 31.4625 27.4408 32.7185 27.4408Z"
+                            fill="black" />
+                        <path d="M13.0312 23.8644H17.5352L15.2792 19.5684L13.0312 23.8644Z" fill="black" />
+                        <path
+                            d="M40.7272 12.424C31.6392 11.728 24.6552 4.328 24.5832 4.256C24.4312 4.088 24.2232 4 23.9992 4C23.7752 4 23.5672 4.088 23.4152 4.256C23.3432 4.328 16.3832 11.728 7.27116 12.424C6.85516 12.456 6.53516 12.808 6.53516 13.224V19.232C6.53516 27.456 9.96716 34.952 15.9432 39.808C18.3672 41.776 20.9992 43.168 23.7832 43.968C23.8552 43.992 23.9272 44 23.9992 44C24.0712 44 24.1512 43.992 24.2232 43.968C26.9992 43.168 29.6312 41.776 32.0552 39.808C38.0312 34.952 41.4632 27.456 41.4632 19.232V13.224C41.4632 12.808 41.1432 12.456 40.7272 12.424ZM19.6632 24.664C19.6632 24.656 19.6632 24.656 19.6632 24.648C19.6552 24.656 19.6632 24.664 19.6632 24.664ZM37.0952 24.68V24.696C37.0792 27.096 35.1192 29.04 32.7192 29.04C30.3192 29.04 28.3592 27.096 28.3432 24.696C28.3432 24.688 28.3432 24.688 28.3432 24.68C28.3432 24.664 28.3432 24.656 28.3432 24.64C28.3432 24.552 28.3672 24.472 28.3912 24.392C28.3992 24.368 28.4072 24.352 28.4152 24.328C28.4232 24.312 28.4232 24.304 28.4312 24.288L31.3912 18.648H24.7992V30.64H27.0392C27.4792 30.64 27.8392 31 27.8392 31.44C27.8392 31.88 27.4792 32.24 27.0392 32.24H23.9992H20.9592C20.5192 32.24 20.1592 31.88 20.1592 31.44C20.1592 31 20.5192 30.64 20.9592 30.64H23.1992V18.648H16.6072L19.5672 24.288C19.5752 24.304 19.5752 24.312 19.5832 24.328C19.5912 24.344 19.5992 24.368 19.6072 24.392C19.6392 24.472 19.6552 24.552 19.6552 24.64V24.68V24.696C19.6392 27.096 17.6792 29.04 15.2792 29.04C12.8792 29.04 10.9192 27.096 10.9032 24.696C10.9032 24.688 10.9032 24.688 10.9032 24.68C10.9032 24.664 10.9032 24.656 10.9032 24.64C10.9032 24.552 10.9272 24.472 10.9512 24.392C10.9592 24.368 10.9672 24.352 10.9752 24.328C10.9832 24.312 10.9832 24.304 10.9912 24.288L14.5672 17.472C14.5992 17.408 14.6472 17.352 14.6952 17.296C14.8392 17.144 15.0472 17.04 15.2712 17.04H23.1992V15.784C23.1992 15.344 23.5592 14.984 23.9992 14.984C24.4392 14.984 24.7992 15.344 24.7992 15.784V17.04H32.7192C32.9512 17.04 33.1592 17.144 33.3112 17.312C33.3592 17.36 33.3992 17.408 33.4312 17.472L37.0072 24.288C37.0152 24.304 37.0152 24.312 37.0232 24.328C37.0312 24.344 37.0392 24.368 37.0472 24.392C37.0792 24.472 37.0952 24.552 37.0952 24.64C37.0952 24.648 37.1032 24.656 37.1032 24.664C37.0952 24.672 37.0952 24.68 37.0952 24.68Z"
+                            fill="black" />
+                        <path
+                            d="M37.0978 24.6806C37.0978 24.6726 37.0978 24.6646 37.0978 24.6646C37.0978 24.6566 37.0898 24.6486 37.0898 24.6406C37.0978 24.6566 37.0978 24.6726 37.0978 24.6806Z"
+                            fill="black" />
+                    </svg>
+
+
+                </div>
+
+                <h3 class="text-[20px] text-[#604B33] font-bold uppercase mulish my-[16px] ">Civil Law</h3>
+                <p class="text-[16px] inter text-black ">Adipiscing nam neque hendrerit nec pellentesque diam a. Varius
+                    quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat pellentesque. Potenti porta
+                    mauris nec vulputate. Massa sagittis lectus montes vel sit. Faucibus odio in ut massa in integer
+                    ultrices lacus est. Tempus ultrices placerat tellus morbi.</p>
+
+            </div>
+            <!-- Card End-->
+
+            <!-- Card -->
+            <div class="flex flex-col items-center text-center max-w-[280px] p-[20px] mx-auto">
+
+                <div class="icon">
+                    <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25.9094 34.5996C25.4694 34.5996 25.1094 34.9516 25.1094 35.3996C25.1094 38.3756 27.5334 40.7996 30.5174 40.7996C33.4934 40.7996 35.9174 38.3756 35.9174 35.3996C35.9174 34.9516 35.5574 34.5996 35.1174 34.5996H25.9094Z"
+                            fill="black" />
+                        <path
+                            d="M9.9 40.7996H26.06C24.5 39.5116 23.508 37.5676 23.508 35.3996C23.508 35.1196 23.564 34.8476 23.652 34.5996H5.3C4.852 34.5996 4.5 34.9516 4.5 35.3996C4.5 38.3756 6.916 40.7996 9.9 40.7996Z"
+                            fill="black" />
+                        <path
+                            d="M35.9141 13.1352H43.6981C44.1381 13.1352 44.4981 12.7752 44.4981 12.3272C44.4981 9.50322 42.2181 7.19922 39.4101 7.19922C39.2341 7.19922 39.0581 7.20722 38.8901 7.22322H16.5221C13.4341 7.22322 10.9141 9.73522 10.9141 12.8232V32.9992H35.9141V13.1352ZM39.4101 8.80722C41.0581 8.80722 42.4421 9.96722 42.8021 11.5272H36.0101C36.3701 9.96722 37.7541 8.80722 39.4101 8.80722ZM23.4181 29.9912H16.1381C15.6901 29.9912 15.3381 29.6312 15.3381 29.1912C15.3381 28.7432 15.6901 28.3912 16.1381 28.3912H23.4181C23.8581 28.3912 24.2181 28.7432 24.2181 29.1912C24.2181 29.6312 23.8581 29.9912 23.4181 29.9912ZM30.6981 24.9512H16.1381C15.6901 24.9512 15.3381 24.5912 15.3381 24.1512C15.3381 23.7112 15.6901 23.3512 16.1381 23.3512H30.6981C31.1381 23.3512 31.4981 23.7112 31.4981 24.1512C31.4981 24.5912 31.1381 24.9512 30.6981 24.9512ZM30.6981 19.9112H16.1381C15.6901 19.9112 15.3381 19.5512 15.3381 19.1112C15.3381 18.6712 15.6901 18.3112 16.1381 18.3112H30.6981C31.1381 18.3112 31.4981 18.6712 31.4981 19.1112C31.4981 19.5512 31.1381 19.9112 30.6981 19.9112ZM30.6981 14.8712H16.1381C15.6901 14.8712 15.3381 14.5112 15.3381 14.0712C15.3381 13.6312 15.6901 13.2712 16.1381 13.2712H30.6981C31.1381 13.2712 31.4981 13.6312 31.4981 14.0712C31.4981 14.5112 31.1381 14.8712 30.6981 14.8712Z"
+                            fill="black" />
+                    </svg>
+
+
+                </div>
+
+                <h3 class="text-[20px] text-[#604B33] font-bold uppercase mulish my-[16px] ">Corporate Law</h3>
+                <p class="text-[16px] inter text-black ">Adipiscing nam neque hendrerit nec pellentesque diam a. Varius
+                    quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat pellentesque. Potenti porta
+                    mauris nec vulputate. Massa sagittis lectus montes vel sit. Faucibus odio in ut massa in integer
+                    ultrices lacus est. Tempus ultrices placerat tellus morbi.</p>
+
+            </div>
+            <!-- Card End-->
+        </div>
+    </div>
+
+    <!-- Img+text Section End Here -->
+
+
+
+    <!-- Banner Section Start Here -->
+    <div class="banner-section max-w-[1440px] mx-auto bg-black">
+        <div class=" container-large p-[60px]">
+            <div class="flex flex-col items-center text-white text-center mx-auto">
+                <h1 class="text-[32px] font-bold mulish">Have legal questions? Ask our experts!</h1>
+                <a class=" py-3 px-8 bg-[#604B33] hover:bg-[#605B33] flex justify-center items-center mt-[45px] font-bold mulish text-[20px]"
+                    href="">Ask an expert</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Section End Here -->
+
+
+
+    <!-- Our Attorneys Section Start Here -->
+    <div class="hero-section max-w-[1440px] mx-auto bg-[#FAF9F4]">
+        <div class=" container-large  py-[50px] mx-auto">
+            <div class="flex flex-col items-center text-center max-w-[882px] mx-auto">
+                <h1 class="text-[40px] font-bold text-[#604B33] mulish "> Our attorneys</h1>
+                <p class="text-[16px] inter text-black"> Varius quisque odio mauris lectus consequat sedretium purus
+                    feugiat volutpat pell</p>
+            </div>
+
+            <!-- Attorneys -->
+            <!-- Cards -->
+            <div class="flex flex-row gap-x-3 flex-wrap">
+                <!-- Card -->
+                <div class="flex flex-col items-center text-center mt-7 max-w-[430px] mx-auto">
+
+                    <div class="attorney-pic mb-2">
+                        <img src="./assets/img/attorney-pic.png" alt="attorney-pic">
+
+                    </div>
+
+                    <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Jackson Bauer</h3>
+                    <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Finance Lawyer</p>
+                    <!-- social media icons -->
+
+                    <div class="inline-flex gap-2 items-center">
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M10.8373 15.4398V9.99931H12.3391L12.5382 8.12448H10.8373L10.8399 7.1861C10.8399 6.69712 10.8863 6.43511 11.5887 6.43511H12.5275V4.56006H11.0255C9.22131 4.56006 8.58628 5.46956 8.58628 6.99904V8.12469H7.46167V9.99952H8.58628V15.4398H10.8373Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_1506)">
+                                    <rect width="20" height="20" rx="10" fill="white" />
+                                    <path
+                                        d="M14.2394 4.33175L14.9858 4.61824L10.7348 8.97225L9.99314 8.69776L14.2394 4.33175Z"
+                                        fill="black" />
+                                    <path
+                                        d="M8.59841 10.1549L9.36083 10.4249L4.76903 15.1306L4.01103 14.8729L8.59841 10.1549Z"
+                                        fill="black" />
+                                    <path
+                                        d="M7.25599 5.08046L14.3691 14.267L12.2352 14.2669L5.11635 5.07001L7.25599 5.08046Z"
+                                        stroke="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_1506">
+                                        <rect width="20" height="20" rx="4" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <rect x="3.33325" y="3.33325" width="13.3333" height="13.3333" rx="6.66667"
+                                    fill="white" />
+                                <path
+                                    d="M9.99927 3.33325C11.8097 3.33325 12.0363 3.34093 12.7473 3.37329C13.4568 3.4058 13.9415 3.51806 14.3665 3.68286C14.8053 3.853 15.1763 4.08156 15.5471 4.45239C15.9178 4.82289 16.1458 5.19465 16.3167 5.63306C16.4805 6.05693 16.5929 6.54153 16.6262 7.25122C16.6582 7.96222 16.6663 8.18979 16.6663 10.0002C16.6663 11.8105 16.6582 12.0372 16.6262 12.7483C16.5929 13.4577 16.4805 13.9424 16.3167 14.3665C16.1458 14.8048 15.9179 15.1766 15.5471 15.5471C15.1768 15.9178 14.8056 16.1464 14.3674 16.3167C13.9433 16.4815 13.4579 16.5937 12.7483 16.6262C12.0372 16.6586 11.81 16.6663 9.99927 16.6663C8.18936 16.6663 7.96217 16.6586 7.25122 16.6262C6.54178 16.5937 6.05716 16.4815 5.63306 16.3167C5.19488 16.1464 4.8228 15.9179 4.45239 15.5471C4.0817 15.1766 3.85328 14.8049 3.68286 14.3665C3.51814 13.9426 3.40593 13.458 3.37329 12.7483C3.34107 12.0372 3.33325 11.8106 3.33325 10.0002C3.33325 8.18992 3.3415 7.96211 3.37329 7.25122C3.40523 6.54191 3.51764 6.05703 3.68286 5.63306C3.85365 5.19483 4.08172 4.82286 4.45239 4.45239C4.82295 4.08169 5.19556 3.85314 5.63403 3.68286C6.05772 3.51815 6.54201 3.4058 7.25122 3.37329C7.96217 3.34094 8.18986 3.33326 9.99927 3.33325Z"
+                                    fill="black" />
+                                <path
+                                    d="M9.40356 4.53638C9.58107 4.5361 9.77969 4.53638 10.0022 4.53638C11.7817 4.53638 11.9928 4.54252 12.6956 4.57446C13.3456 4.60419 13.6988 4.7127 13.9338 4.80396C14.2448 4.92476 14.4664 5.06973 14.6995 5.30298C14.9327 5.53626 15.0774 5.75853 15.1985 6.06958C15.2897 6.30431 15.3984 6.65712 15.428 7.30688C15.4599 8.00961 15.467 8.22112 15.467 10.0002C15.467 11.7788 15.4599 11.9902 15.428 12.6926C15.3983 13.3426 15.2897 13.6962 15.1985 13.9309C15.0777 14.2418 14.9327 14.4634 14.6995 14.6965C14.4663 14.9297 14.2448 15.0738 13.9338 15.1946C13.6991 15.2862 13.3456 15.3953 12.6956 15.425C11.9929 15.457 11.7817 15.4631 10.0022 15.4631C8.22211 15.4631 8.01058 15.457 7.30786 15.425C6.65785 15.395 6.30472 15.2858 6.06958 15.1946C5.75866 15.0738 5.53621 14.9298 5.30298 14.6965C5.06964 14.4632 4.92507 14.2412 4.80396 13.9299C4.71272 13.6952 4.60405 13.3424 4.57446 12.6926C4.54252 11.9898 4.53638 11.7785 4.53638 9.99829C4.53638 8.21799 4.54252 8.00772 4.57446 7.30493C4.60418 6.65538 4.71274 6.30261 4.80396 6.06763C4.92474 5.75664 5.06981 5.53426 5.30298 5.30103C5.53623 5.06777 5.75863 4.92309 6.06958 4.802C6.30458 4.71033 6.65785 4.60139 7.30786 4.57153C7.92279 4.54376 8.16118 4.53581 9.40356 4.53442V4.53638ZM10.0032 6.57739C8.11246 6.57739 6.57935 8.11051 6.57935 10.0012C6.57944 11.8919 8.11252 13.4241 10.0032 13.4241C11.8937 13.424 13.4259 11.8918 13.426 10.0012C13.426 8.11061 11.8937 6.57757 10.0032 6.57739ZM13.5588 5.6438C13.1173 5.64391 12.7591 6.00195 12.759 6.4436C12.759 6.88521 13.1173 7.2433 13.5588 7.24341C14.0005 7.24341 14.3586 6.88527 14.3586 6.4436C14.3585 6.00203 14.0004 5.6438 13.5588 5.6438Z"
+                                    fill="white" />
+                                <path
+                                    d="M10.0008 7.77856C11.228 7.77856 12.2231 8.77344 12.2231 10.0008C12.2231 11.228 11.228 12.2231 10.0008 12.2231C8.77344 12.2231 7.77856 11.228 7.77856 10.0008C7.77856 8.77344 8.77344 7.77856 10.0008 7.77856V7.77856Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M7.82275 11.4587L7.6526 14.0078C7.9026 14.0078 8.01306 13.8934 8.1526 13.7578L9.35373 12.5898L11.8526 14.436C12.3125 14.6898 12.6444 14.5584 12.7589 14.0091L14.3994 6.27881C14.5673 5.60546 14.1427 5.30006 13.7027 5.49979L4.07024 9.21404C3.41273 9.47777 3.41656 9.84459 3.95039 10.008L6.4223 10.7796L12.1451 7.16915C12.4152 7.00532 12.6632 7.0934 12.4597 7.27402L7.8226 11.4586L7.82275 11.4587Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+
+
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div class="flex flex-col items-center text-center mt-7 max-w-[430px] mx-auto">
+
+                    <div class="attorney-pic mb-2">
+                        <img src="./assets/img/attorney-pic2.png" alt="attorney-pic">
+
+                    </div>
+
+                    <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Jackson Bauer</h3>
+                    <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Finance Lawyer</p>
+
+                    <!-- social media icons -->
+
+                    <div class="inline-flex gap-2 items-center">
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M10.8373 15.4398V9.99931H12.3391L12.5382 8.12448H10.8373L10.8399 7.1861C10.8399 6.69712 10.8863 6.43511 11.5887 6.43511H12.5275V4.56006H11.0255C9.22131 4.56006 8.58628 5.46956 8.58628 6.99904V8.12469H7.46167V9.99952H8.58628V15.4398H10.8373Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_1506)">
+                                    <rect width="20" height="20" rx="10" fill="white" />
+                                    <path
+                                        d="M14.2394 4.33175L14.9858 4.61824L10.7348 8.97225L9.99314 8.69776L14.2394 4.33175Z"
+                                        fill="black" />
+                                    <path
+                                        d="M8.59841 10.1549L9.36083 10.4249L4.76903 15.1306L4.01103 14.8729L8.59841 10.1549Z"
+                                        fill="black" />
+                                    <path
+                                        d="M7.25599 5.08046L14.3691 14.267L12.2352 14.2669L5.11635 5.07001L7.25599 5.08046Z"
+                                        stroke="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_1506">
+                                        <rect width="20" height="20" rx="4" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <rect x="3.33325" y="3.33325" width="13.3333" height="13.3333" rx="6.66667"
+                                    fill="white" />
+                                <path
+                                    d="M9.99927 3.33325C11.8097 3.33325 12.0363 3.34093 12.7473 3.37329C13.4568 3.4058 13.9415 3.51806 14.3665 3.68286C14.8053 3.853 15.1763 4.08156 15.5471 4.45239C15.9178 4.82289 16.1458 5.19465 16.3167 5.63306C16.4805 6.05693 16.5929 6.54153 16.6262 7.25122C16.6582 7.96222 16.6663 8.18979 16.6663 10.0002C16.6663 11.8105 16.6582 12.0372 16.6262 12.7483C16.5929 13.4577 16.4805 13.9424 16.3167 14.3665C16.1458 14.8048 15.9179 15.1766 15.5471 15.5471C15.1768 15.9178 14.8056 16.1464 14.3674 16.3167C13.9433 16.4815 13.4579 16.5937 12.7483 16.6262C12.0372 16.6586 11.81 16.6663 9.99927 16.6663C8.18936 16.6663 7.96217 16.6586 7.25122 16.6262C6.54178 16.5937 6.05716 16.4815 5.63306 16.3167C5.19488 16.1464 4.8228 15.9179 4.45239 15.5471C4.0817 15.1766 3.85328 14.8049 3.68286 14.3665C3.51814 13.9426 3.40593 13.458 3.37329 12.7483C3.34107 12.0372 3.33325 11.8106 3.33325 10.0002C3.33325 8.18992 3.3415 7.96211 3.37329 7.25122C3.40523 6.54191 3.51764 6.05703 3.68286 5.63306C3.85365 5.19483 4.08172 4.82286 4.45239 4.45239C4.82295 4.08169 5.19556 3.85314 5.63403 3.68286C6.05772 3.51815 6.54201 3.4058 7.25122 3.37329C7.96217 3.34094 8.18986 3.33326 9.99927 3.33325Z"
+                                    fill="black" />
+                                <path
+                                    d="M9.40356 4.53638C9.58107 4.5361 9.77969 4.53638 10.0022 4.53638C11.7817 4.53638 11.9928 4.54252 12.6956 4.57446C13.3456 4.60419 13.6988 4.7127 13.9338 4.80396C14.2448 4.92476 14.4664 5.06973 14.6995 5.30298C14.9327 5.53626 15.0774 5.75853 15.1985 6.06958C15.2897 6.30431 15.3984 6.65712 15.428 7.30688C15.4599 8.00961 15.467 8.22112 15.467 10.0002C15.467 11.7788 15.4599 11.9902 15.428 12.6926C15.3983 13.3426 15.2897 13.6962 15.1985 13.9309C15.0777 14.2418 14.9327 14.4634 14.6995 14.6965C14.4663 14.9297 14.2448 15.0738 13.9338 15.1946C13.6991 15.2862 13.3456 15.3953 12.6956 15.425C11.9929 15.457 11.7817 15.4631 10.0022 15.4631C8.22211 15.4631 8.01058 15.457 7.30786 15.425C6.65785 15.395 6.30472 15.2858 6.06958 15.1946C5.75866 15.0738 5.53621 14.9298 5.30298 14.6965C5.06964 14.4632 4.92507 14.2412 4.80396 13.9299C4.71272 13.6952 4.60405 13.3424 4.57446 12.6926C4.54252 11.9898 4.53638 11.7785 4.53638 9.99829C4.53638 8.21799 4.54252 8.00772 4.57446 7.30493C4.60418 6.65538 4.71274 6.30261 4.80396 6.06763C4.92474 5.75664 5.06981 5.53426 5.30298 5.30103C5.53623 5.06777 5.75863 4.92309 6.06958 4.802C6.30458 4.71033 6.65785 4.60139 7.30786 4.57153C7.92279 4.54376 8.16118 4.53581 9.40356 4.53442V4.53638ZM10.0032 6.57739C8.11246 6.57739 6.57935 8.11051 6.57935 10.0012C6.57944 11.8919 8.11252 13.4241 10.0032 13.4241C11.8937 13.424 13.4259 11.8918 13.426 10.0012C13.426 8.11061 11.8937 6.57757 10.0032 6.57739ZM13.5588 5.6438C13.1173 5.64391 12.7591 6.00195 12.759 6.4436C12.759 6.88521 13.1173 7.2433 13.5588 7.24341C14.0005 7.24341 14.3586 6.88527 14.3586 6.4436C14.3585 6.00203 14.0004 5.6438 13.5588 5.6438Z"
+                                    fill="white" />
+                                <path
+                                    d="M10.0008 7.77856C11.228 7.77856 12.2231 8.77344 12.2231 10.0008C12.2231 11.228 11.228 12.2231 10.0008 12.2231C8.77344 12.2231 7.77856 11.228 7.77856 10.0008C7.77856 8.77344 8.77344 7.77856 10.0008 7.77856V7.77856Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M7.82275 11.4587L7.6526 14.0078C7.9026 14.0078 8.01306 13.8934 8.1526 13.7578L9.35373 12.5898L11.8526 14.436C12.3125 14.6898 12.6444 14.5584 12.7589 14.0091L14.3994 6.27881C14.5673 5.60546 14.1427 5.30006 13.7027 5.49979L4.07024 9.21404C3.41273 9.47777 3.41656 9.84459 3.95039 10.008L6.4223 10.7796L12.1451 7.16915C12.4152 7.00532 12.6632 7.0934 12.4597 7.27402L7.8226 11.4586L7.82275 11.4587Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+
+
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <div class="flex flex-col items-center text-center mt-7 max-w-[430px] mx-auto">
+
+                    <div class="attorney-pic mb-2">
+                        <img src="./assets/img/attorney-pic3.png" alt="attorney-pic">
+
+                    </div>
+
+                    <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Jackson Bauer</h3>
+                    <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Finance Lawyer</p>
+
+                    <!-- social media icons -->
+
+                    <div class="inline-flex gap-2 items-center">
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M10.8373 15.4398V9.99931H12.3391L12.5382 8.12448H10.8373L10.8399 7.1861C10.8399 6.69712 10.8863 6.43511 11.5887 6.43511H12.5275V4.56006H11.0255C9.22131 4.56006 8.58628 5.46956 8.58628 6.99904V8.12469H7.46167V9.99952H8.58628V15.4398H10.8373Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_1506)">
+                                    <rect width="20" height="20" rx="10" fill="white" />
+                                    <path
+                                        d="M14.2394 4.33175L14.9858 4.61824L10.7348 8.97225L9.99314 8.69776L14.2394 4.33175Z"
+                                        fill="black" />
+                                    <path
+                                        d="M8.59841 10.1549L9.36083 10.4249L4.76903 15.1306L4.01103 14.8729L8.59841 10.1549Z"
+                                        fill="black" />
+                                    <path
+                                        d="M7.25599 5.08046L14.3691 14.267L12.2352 14.2669L5.11635 5.07001L7.25599 5.08046Z"
+                                        stroke="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_1506">
+                                        <rect width="20" height="20" rx="4" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <rect x="3.33325" y="3.33325" width="13.3333" height="13.3333" rx="6.66667"
+                                    fill="white" />
+                                <path
+                                    d="M9.99927 3.33325C11.8097 3.33325 12.0363 3.34093 12.7473 3.37329C13.4568 3.4058 13.9415 3.51806 14.3665 3.68286C14.8053 3.853 15.1763 4.08156 15.5471 4.45239C15.9178 4.82289 16.1458 5.19465 16.3167 5.63306C16.4805 6.05693 16.5929 6.54153 16.6262 7.25122C16.6582 7.96222 16.6663 8.18979 16.6663 10.0002C16.6663 11.8105 16.6582 12.0372 16.6262 12.7483C16.5929 13.4577 16.4805 13.9424 16.3167 14.3665C16.1458 14.8048 15.9179 15.1766 15.5471 15.5471C15.1768 15.9178 14.8056 16.1464 14.3674 16.3167C13.9433 16.4815 13.4579 16.5937 12.7483 16.6262C12.0372 16.6586 11.81 16.6663 9.99927 16.6663C8.18936 16.6663 7.96217 16.6586 7.25122 16.6262C6.54178 16.5937 6.05716 16.4815 5.63306 16.3167C5.19488 16.1464 4.8228 15.9179 4.45239 15.5471C4.0817 15.1766 3.85328 14.8049 3.68286 14.3665C3.51814 13.9426 3.40593 13.458 3.37329 12.7483C3.34107 12.0372 3.33325 11.8106 3.33325 10.0002C3.33325 8.18992 3.3415 7.96211 3.37329 7.25122C3.40523 6.54191 3.51764 6.05703 3.68286 5.63306C3.85365 5.19483 4.08172 4.82286 4.45239 4.45239C4.82295 4.08169 5.19556 3.85314 5.63403 3.68286C6.05772 3.51815 6.54201 3.4058 7.25122 3.37329C7.96217 3.34094 8.18986 3.33326 9.99927 3.33325Z"
+                                    fill="black" />
+                                <path
+                                    d="M9.40356 4.53638C9.58107 4.5361 9.77969 4.53638 10.0022 4.53638C11.7817 4.53638 11.9928 4.54252 12.6956 4.57446C13.3456 4.60419 13.6988 4.7127 13.9338 4.80396C14.2448 4.92476 14.4664 5.06973 14.6995 5.30298C14.9327 5.53626 15.0774 5.75853 15.1985 6.06958C15.2897 6.30431 15.3984 6.65712 15.428 7.30688C15.4599 8.00961 15.467 8.22112 15.467 10.0002C15.467 11.7788 15.4599 11.9902 15.428 12.6926C15.3983 13.3426 15.2897 13.6962 15.1985 13.9309C15.0777 14.2418 14.9327 14.4634 14.6995 14.6965C14.4663 14.9297 14.2448 15.0738 13.9338 15.1946C13.6991 15.2862 13.3456 15.3953 12.6956 15.425C11.9929 15.457 11.7817 15.4631 10.0022 15.4631C8.22211 15.4631 8.01058 15.457 7.30786 15.425C6.65785 15.395 6.30472 15.2858 6.06958 15.1946C5.75866 15.0738 5.53621 14.9298 5.30298 14.6965C5.06964 14.4632 4.92507 14.2412 4.80396 13.9299C4.71272 13.6952 4.60405 13.3424 4.57446 12.6926C4.54252 11.9898 4.53638 11.7785 4.53638 9.99829C4.53638 8.21799 4.54252 8.00772 4.57446 7.30493C4.60418 6.65538 4.71274 6.30261 4.80396 6.06763C4.92474 5.75664 5.06981 5.53426 5.30298 5.30103C5.53623 5.06777 5.75863 4.92309 6.06958 4.802C6.30458 4.71033 6.65785 4.60139 7.30786 4.57153C7.92279 4.54376 8.16118 4.53581 9.40356 4.53442V4.53638ZM10.0032 6.57739C8.11246 6.57739 6.57935 8.11051 6.57935 10.0012C6.57944 11.8919 8.11252 13.4241 10.0032 13.4241C11.8937 13.424 13.4259 11.8918 13.426 10.0012C13.426 8.11061 11.8937 6.57757 10.0032 6.57739ZM13.5588 5.6438C13.1173 5.64391 12.7591 6.00195 12.759 6.4436C12.759 6.88521 13.1173 7.2433 13.5588 7.24341C14.0005 7.24341 14.3586 6.88527 14.3586 6.4436C14.3585 6.00203 14.0004 5.6438 13.5588 5.6438Z"
+                                    fill="white" />
+                                <path
+                                    d="M10.0008 7.77856C11.228 7.77856 12.2231 8.77344 12.2231 10.0008C12.2231 11.228 11.228 12.2231 10.0008 12.2231C8.77344 12.2231 7.77856 11.228 7.77856 10.0008C7.77856 8.77344 8.77344 7.77856 10.0008 7.77856V7.77856Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M7.82275 11.4587L7.6526 14.0078C7.9026 14.0078 8.01306 13.8934 8.1526 13.7578L9.35373 12.5898L11.8526 14.436C12.3125 14.6898 12.6444 14.5584 12.7589 14.0091L14.3994 6.27881C14.5673 5.60546 14.1427 5.30006 13.7027 5.49979L4.07024 9.21404C3.41273 9.47777 3.41656 9.84459 3.95039 10.008L6.4223 10.7796L12.1451 7.16915C12.4152 7.00532 12.6632 7.0934 12.4597 7.27402L7.8226 11.4586L7.82275 11.4587Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Our Attorneys Section End Here -->
+
+
+
+    <!-- Legal Excellence Section Start Here -->
+    <div class="legal-section max-w-[1440px] mx-auto bg-[#FAF9F4]">
+
+        <div class="container-small mx-auto py-[60px]">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-x-[50px]">
+                <div class="w-1/2 legal-left-image flex mb-8 md:mb-0 justify-between items-center">
+                    <img src="./assets/img/legal-img.png" alt="">
+                </div>
+
+                <div class="w-1/2  flex flex-col items-center mx-auto text-center">
+                    <h1 class="text-[40px] text-[#604B33] font-bold mulish mb-10 leading-[40px]">Legal Excellence,
+                        Personalized Care</h1>
+                    <p class="text-[20px] text-black inter my-4">Adipiscing nam neque hendrerit nec pellentesque diam a.
+                        Varius quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat
+                        pellentesque.Potenti porta mauris nec vulputate. </p>
+                    <a class="py-3 px-8 bg-[#604B33] hover:bg-[#605B33] flex justify-center text-white items-center my-10 font-bold mulish text-[20px]"
+                        href="">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal Excellence Section End Here -->
+
+
+    <!-- Client Says Section Start Here -->
+    <div class="cleint-section max-w-[1440px] mx-auto bg-white">
+
+        <div class="container-small mx-auto py-[60px]">
+            <div class="flex flex-col items-center text-center max-w-[882px] mx-auto mb-2">
+                <h1 class="text-[40px] font-bold text-[#604B33] mulish "> What our client says</h1>
+                <p class="text-[16px] inter text-black"> Our Testimonials</p>
+            </div>
+
+            <div class="right-side">
+
+                <div class="flex flex-col md:flex-row justify-between items-center ">
+
+                    <div class="line relative flex -left-47 top-15 md:top-0 md:left-0  "><img
+                            src="./assets/img/Line+quotes.png" alt=""></div>
+                    <div class="absolute grid grid-cols-2 order-2 ml-10 max-w-[600px]">
+
+                        <p class="text-[20px] text-black inter my-4 mr-2">Adipiscing nam neque hendrerit nec
+                            pellentesque diam a. Varius quisque odio mauris lectus consequat sed. Pretium purus feugiat
+                            volutpat pellentesque.Potenti porta mauris nec vulputate. </p>
+                        <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Kirsten Gutierrez</h3>
+                        <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Founder K&G Company</p>
+                    </div>
+                    <div class="client-right-image flex mb-8 mt-30 md:mt-0 md:mb-0 justify-between items-center">
+                        <img src="./assets/img/client.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Says Section End Here -->
+
+    <!-- Form Section Start Here -->
+    <div class="cleint-section max-w-[1440px] mx-auto bg-black">
+
+        <div class="container-small mx-auto py-[120px]">
+            <div class="flex justify-center items-center gap-y-[50px] flex-col md:flex-row gap-x-[130px]">
+                <div class="w-full md:w-1/2 p-[10px] md:p-[40px] text-center text-white">
+
+                    <div class="flex flex-col items-center gap-[20px]">
+                        <img src="assets/img/logo2.png" alt="logo2">
+                        <h1 class="text-[40px]  font-bold mulish leading-[40px]">Request a free
+                            consultation</h1>
+                        <p class="text-[20px] inter my-4 ">Adipiscing nam neque hendrerit nec
+                            pellentesque
+                            diam a. Varius quisque odio mauris lectus consequat sed. Pretium purus feugiat volutpat
+                            pellentesque.Potenti porta mauris nec vulputate. </p>
+
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 md:p-[40px] bg-[#F9F8F5]">
+                    <form action="">
+                        <fieldset>
+                            <div class="m-4 md:m-0 grid grid-cols-1 md:grid-cols-2 gap-[20px]">
+                                <div class=""><label for="name">Name</label>
+                                    <input class="bg-white py-2 px-4 w-full" type="text" id="name"
+                                        placeholder="Your Name">
+                                </div>
+                                <div class=""><label for="name">Phone</label>
+                                    <input class="bg-white py-2 px-4 w-full" type="tel" id="phone"
+                                        placeholder="Your Phone">
+                                </div>
+                                <div class=""><label for="name">Email</label>
+                                    <input class="bg-white py-2 px-4 w-full" type="email" id="email"
+                                        placeholder="Your Email">
+                                </div>
+                                <div class=""><label for="service">Service</label>
+                                    <input class="bg-white py-2 px-4 w-full" type="text" id="service"
+                                        placeholder="Civil Law">
+                                </div>
+
+
+
+                                <!-- learn more btn -->
+
+                            </div>
+                            <div class="m-4 md:m-0 flex flex-col gap-[20px] md:mt-[20px]">
+                                <div class="subject w-full">
+                                    <label for="subject">Subject</label>
+                                    <input class="bg-white py-2 px-4 w-full" type="text" id="subject"
+                                        placeholder="Subject">
+                                </div>
+
+                                <div class="massage w-full">
+                                    <label for="massage">Massage</label>
+                                    <textarea class="bg-white py-2 px-4 w-full" type="texarea" id="massage"
+                                        placeholder="Massage" rows="3"></textarea>
+                                </div>
+
+                                <button type="submit"
+                                    class="py-3 w-full bg-[#604B33] hover:bg-[#605B33] flex justify-center items-center font-bold mulish cursor-pointer text-white text-[20px]"
+                                    href="">Request consultation
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Form Section End Here -->
+
+    <!-- Blog Section Start Here -->
+    <div class="hero-section max-w-[1440px] mx-auto bg-[#FAF9F4]">
+        <div class=" container-large  py-[50px] mx-auto">
+            <div class="flex flex-col items-center text-center max-w-[882px] mx-auto">
+                <h1 class="text-[40px] font-bold text-[#604B33] mulish "> Our Blog</h1>
+                <p class="text-[20px] px-2 inter text-black"> Adipiscing nam neque hendrerit nec pellentesque diamarius
+                    quisque odio </p>
+            </div>
+
+            <!-- Blogs -->
+            <!-- Cards -->
+            <div class="flex flex-row gap-x-5 flex-wrap">
+                <!-- Card -->
+                <div class="flex flex-col  mt-7 max-w-[417px] mx-auto">
+
+                    <div class="blog-pic mb-2">
+                        <img src="./assets/img/Img+text.png" class="object-cover w-full h-[260px]" alt="blog-pic">
+
+                    </div>
+
+                    <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
+                    <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3">Crime, civil law, justice and rights
+                    </h3>
+
+                    <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
+                        href="#">Read
+                        More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </span></a>
+                </div>
+
+                <!-- Card -->
+                <div class="flex flex-col  mt-7 max-w-[417px] mx-auto">
+
+                    <div class="blog-pic mb-2">
+                        <img src="./assets/img/Img+text.png" class="object-cover w-full h-[260px]" alt="blog-pic">
+
+                    </div>
+
+                    <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
+                    <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3">Crime, civil law, justice and rights
+                    </h3>
+
+                    <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
+                        href="#">Read
+                        More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </span></a>
+                </div>
+
+                <!-- Card -->
+                <div class="flex flex-col  mt-7 max-w-[417px] mx-auto">
+
+                    <div class="blog-pic mb-2">
+                        <img src="./assets/img/Img+text.png" class="object-cover w-full h-[260px]" alt="blog-pic">
+
+                    </div>
+
+                    <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
+                    <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3">Crime, civil law, justice and rights
+                    </h3>
+
+                    <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
+                        href="#">Read
+                        More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </span></a>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Blog Section End Here -->
+
+
+
+    <!-- footer section starts here -->
+
+
+    <div class="footer-section max-w-[1440px]  bg-black mx-auto">
+        <div class="container-large w-full pt-[30px] md:pt-[96px] px-5 md:px-auto mx-auto">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-10 text-left text-white">
+
+                <div class="w-[100%] md:w-2/5 flex flex-col gap-[18px] ">
+                    <div class="logo font-bold text-[24px] leading-[34px] sen">
+                        <a href="#"><img src="assets/img/Logo.png" alt=""></a>
+                    </div>
+
+                    <p class=" text-[14px] max-w-[250px] poppins text-white">Adipiscing nam neque hendrerit nec
+                        pellentesque diam a. Varius quisque odio mauris lectus consequat sed.</p>
+
+                    <!-- social media icons -->
+
+                    <div class="inline-flex gap-2 items-center">
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M10.8373 15.4398V9.99931H12.3391L12.5382 8.12448H10.8373L10.8399 7.1861C10.8399 6.69712 10.8863 6.43511 11.5887 6.43511H12.5275V4.56006H11.0255C9.22131 4.56006 8.58628 5.46956 8.58628 6.99904V8.12469H7.46167V9.99952H8.58628V15.4398H10.8373Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_1506)">
+                                    <rect width="20" height="20" rx="10" fill="white" />
+                                    <path
+                                        d="M14.2394 4.33175L14.9858 4.61824L10.7348 8.97225L9.99314 8.69776L14.2394 4.33175Z"
+                                        fill="black" />
+                                    <path
+                                        d="M8.59841 10.1549L9.36083 10.4249L4.76903 15.1306L4.01103 14.8729L8.59841 10.1549Z"
+                                        fill="black" />
+                                    <path
+                                        d="M7.25599 5.08046L14.3691 14.267L12.2352 14.2669L5.11635 5.07001L7.25599 5.08046Z"
+                                        stroke="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_1506">
+                                        <rect width="20" height="20" rx="4" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <rect x="3.33325" y="3.33325" width="13.3333" height="13.3333" rx="6.66667"
+                                    fill="white" />
+                                <path
+                                    d="M9.99927 3.33325C11.8097 3.33325 12.0363 3.34093 12.7473 3.37329C13.4568 3.4058 13.9415 3.51806 14.3665 3.68286C14.8053 3.853 15.1763 4.08156 15.5471 4.45239C15.9178 4.82289 16.1458 5.19465 16.3167 5.63306C16.4805 6.05693 16.5929 6.54153 16.6262 7.25122C16.6582 7.96222 16.6663 8.18979 16.6663 10.0002C16.6663 11.8105 16.6582 12.0372 16.6262 12.7483C16.5929 13.4577 16.4805 13.9424 16.3167 14.3665C16.1458 14.8048 15.9179 15.1766 15.5471 15.5471C15.1768 15.9178 14.8056 16.1464 14.3674 16.3167C13.9433 16.4815 13.4579 16.5937 12.7483 16.6262C12.0372 16.6586 11.81 16.6663 9.99927 16.6663C8.18936 16.6663 7.96217 16.6586 7.25122 16.6262C6.54178 16.5937 6.05716 16.4815 5.63306 16.3167C5.19488 16.1464 4.8228 15.9179 4.45239 15.5471C4.0817 15.1766 3.85328 14.8049 3.68286 14.3665C3.51814 13.9426 3.40593 13.458 3.37329 12.7483C3.34107 12.0372 3.33325 11.8106 3.33325 10.0002C3.33325 8.18992 3.3415 7.96211 3.37329 7.25122C3.40523 6.54191 3.51764 6.05703 3.68286 5.63306C3.85365 5.19483 4.08172 4.82286 4.45239 4.45239C4.82295 4.08169 5.19556 3.85314 5.63403 3.68286C6.05772 3.51815 6.54201 3.4058 7.25122 3.37329C7.96217 3.34094 8.18986 3.33326 9.99927 3.33325Z"
+                                    fill="black" />
+                                <path
+                                    d="M9.40356 4.53638C9.58107 4.5361 9.77969 4.53638 10.0022 4.53638C11.7817 4.53638 11.9928 4.54252 12.6956 4.57446C13.3456 4.60419 13.6988 4.7127 13.9338 4.80396C14.2448 4.92476 14.4664 5.06973 14.6995 5.30298C14.9327 5.53626 15.0774 5.75853 15.1985 6.06958C15.2897 6.30431 15.3984 6.65712 15.428 7.30688C15.4599 8.00961 15.467 8.22112 15.467 10.0002C15.467 11.7788 15.4599 11.9902 15.428 12.6926C15.3983 13.3426 15.2897 13.6962 15.1985 13.9309C15.0777 14.2418 14.9327 14.4634 14.6995 14.6965C14.4663 14.9297 14.2448 15.0738 13.9338 15.1946C13.6991 15.2862 13.3456 15.3953 12.6956 15.425C11.9929 15.457 11.7817 15.4631 10.0022 15.4631C8.22211 15.4631 8.01058 15.457 7.30786 15.425C6.65785 15.395 6.30472 15.2858 6.06958 15.1946C5.75866 15.0738 5.53621 14.9298 5.30298 14.6965C5.06964 14.4632 4.92507 14.2412 4.80396 13.9299C4.71272 13.6952 4.60405 13.3424 4.57446 12.6926C4.54252 11.9898 4.53638 11.7785 4.53638 9.99829C4.53638 8.21799 4.54252 8.00772 4.57446 7.30493C4.60418 6.65538 4.71274 6.30261 4.80396 6.06763C4.92474 5.75664 5.06981 5.53426 5.30298 5.30103C5.53623 5.06777 5.75863 4.92309 6.06958 4.802C6.30458 4.71033 6.65785 4.60139 7.30786 4.57153C7.92279 4.54376 8.16118 4.53581 9.40356 4.53442V4.53638ZM10.0032 6.57739C8.11246 6.57739 6.57935 8.11051 6.57935 10.0012C6.57944 11.8919 8.11252 13.4241 10.0032 13.4241C11.8937 13.424 13.4259 11.8918 13.426 10.0012C13.426 8.11061 11.8937 6.57757 10.0032 6.57739ZM13.5588 5.6438C13.1173 5.64391 12.7591 6.00195 12.759 6.4436C12.759 6.88521 13.1173 7.2433 13.5588 7.24341C14.0005 7.24341 14.3586 6.88527 14.3586 6.4436C14.3585 6.00203 14.0004 5.6438 13.5588 5.6438Z"
+                                    fill="white" />
+                                <path
+                                    d="M10.0008 7.77856C11.228 7.77856 12.2231 8.77344 12.2231 10.0008C12.2231 11.228 11.228 12.2231 10.0008 12.2231C8.77344 12.2231 7.77856 11.228 7.77856 10.0008C7.77856 8.77344 8.77344 7.77856 10.0008 7.77856V7.77856Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M7.82275 11.4587L7.6526 14.0078C7.9026 14.0078 8.01306 13.8934 8.1526 13.7578L9.35373 12.5898L11.8526 14.436C12.3125 14.6898 12.6444 14.5584 12.7589 14.0091L14.3994 6.27881C14.5673 5.60546 14.1427 5.30006 13.7027 5.49979L4.07024 9.21404C3.41273 9.47777 3.41656 9.84459 3.95039 10.008L6.4223 10.7796L12.1451 7.16915C12.4152 7.00532 12.6632 7.0934 12.4597 7.27402L7.8226 11.4586L7.82275 11.4587Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+
+
+                    </div>
+                </div>
+
+                <div class="w-[100%] md:w-1/5 ml-auto md:-ml-10 md:mt-0 mt-[30px]">
+                    <p class="text-base text-[#fff] mb-[14px] font-semibold 
+                 leading-[28px]">Links</p>
+                    <p class="mb-[28px]"><svg width="130" height="1" viewBox="0 0 130 1" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="130" height="1" fill="#59554B" />
+                        </svg>
+                    </p>
+
+                    <div class="flex flex-col gap-[12px] text-[14px] poppins text-[#BFBCB2]  leading-[26px]">
+                        <a class="hover:text-white" href="">Home</a>
+                        <a class="hover:text-white" href="">Services</a>
+                        <a class="hover:text-white" href="">Our About us</a>
+                        <a class="hover:text-white" href="">Contact us</a>
+                    </div>
+                </div>
+
+                <div class="w-[100%] md:w-1/5 ml-auto md:-ml-10 md:mt-0 mt-[30px]">
+                    <p class="text-base text-[#fff] mb-[14px] font-semibold 
+                 leading-[28px]">Find Us</p>
+                    <p class="mb-[28px]"><svg width="130" height="1" viewBox="0 0 130 1" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="130" height="1" fill="#59554B" />
+                        </svg>
+                    </p>
+
+                    <div class="flex flex-col gap-[12px] text-[14px] poppins text-[#BFBCB2]  leading-[26px]">
+                        <a class="hover:text-white" href="">43 W. Wellington Road Fairhope
+                            AL 36532s</a>
+                        <a class="hover:text-white" href="">(257) 388-6895</a>
+                        <a class="hover:text-white" href="">temmink@outlook.com</a>
+
+                    </div>
+                </div>
+
+                <div class="w-[100%] md:w-1/5 ml-auto md:-ml-10 md:mt-0 mt-[30px]">
+                    <p class="text-base text-[#fff] mb-[14px] font-semibold 
+                 leading-[28px]">Practice Areas</p>
+                    <p class="mb-[28px]"><svg width="130" height="1" viewBox="0 0 130 1" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="130" height="1" fill="#59554B" />
+                        </svg>
+                    </p>
+
+                    <div class="flex flex-col gap-[12px] text-[14px] poppins text-[#BFBCB2]  leading-[26px]">
+                        <a class="hover:text-white" href="">Banking and Finance</a>
+                        <a class="hover:text-white" href="">Business Law</a>
+                        <a class="hover:text-white" href="">Real Estate</a>
+                        <a class="hover:text-white" href="">Family Law</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[38px] mx-auto max-w-[1170px] h-[1px] bg-[#59554B] ">
+
+
+            </div>
+
+            <!-- Copyright Footer -->
+            <p class="py-[28px] text-[16px] text-[#BFBCB2] text-center">©Copyright Law Firm 2023. Design by Figma.guru
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
