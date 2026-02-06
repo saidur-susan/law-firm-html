@@ -14,3 +14,19 @@
 .inter {
     font-family: ;
 }
+
+
+/* menu btn changer css */
+.open .top-bar {
+    rotate: 45deg;
+    top: 6px;
+}
+
+.open .middle-bar {
+    opacity: 0;
+}
+
+.open .bottom-bar {
+    rotate: 135deg;
+    top: -6px;
+}
