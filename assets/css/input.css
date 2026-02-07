@@ -30,3 +30,10 @@
     rotate: 135deg;
     top: -6px;
 }
+
+/*slick carousel gap in cards*/
+.slick-track {
+    display: flex;
+    gap: 16px;
+
+}

@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Law Firm Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/input.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 
 </head>
 
@@ -360,7 +363,7 @@
 
             <!-- Attorneys -->
             <!-- Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 mx-4 ">
+            <div class="attorney-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 m-4 ">
                 <!-- Card -->
                 <div class="flex flex-col items-center text-center mt-7 max-w-[430px] mx-auto">
 
@@ -596,6 +599,85 @@
 
                     </div>
                 </div>
+
+                <!-- Card -->
+                <div class="flex flex-col items-center text-center mt-7 max-w-[430px] mx-auto">
+
+                    <div class="attorney-pic mb-2">
+                        <img src="./assets/img/attorney-pic3.png" alt="attorney-pic">
+
+                    </div>
+
+                    <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Jackson Bauer</h3>
+                    <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Finance Lawyer</p>
+
+                    <!-- social media icons -->
+
+                    <div class="inline-flex gap-2 items-center">
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M10.8373 15.4398V9.99931H12.3391L12.5382 8.12448H10.8373L10.8399 7.1861C10.8399 6.69712 10.8863 6.43511 11.5887 6.43511H12.5275V4.56006H11.0255C9.22131 4.56006 8.58628 5.46956 8.58628 6.99904V8.12469H7.46167V9.99952H8.58628V15.4398H10.8373Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_1506)">
+                                    <rect width="20" height="20" rx="10" fill="white" />
+                                    <path
+                                        d="M14.2394 4.33175L14.9858 4.61824L10.7348 8.97225L9.99314 8.69776L14.2394 4.33175Z"
+                                        fill="black" />
+                                    <path
+                                        d="M8.59841 10.1549L9.36083 10.4249L4.76903 15.1306L4.01103 14.8729L8.59841 10.1549Z"
+                                        fill="black" />
+                                    <path
+                                        d="M7.25599 5.08046L14.3691 14.267L12.2352 14.2669L5.11635 5.07001L7.25599 5.08046Z"
+                                        stroke="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_1506">
+                                        <rect width="20" height="20" rx="4" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <rect x="3.33325" y="3.33325" width="13.3333" height="13.3333" rx="6.66667"
+                                    fill="white" />
+                                <path
+                                    d="M9.99927 3.33325C11.8097 3.33325 12.0363 3.34093 12.7473 3.37329C13.4568 3.4058 13.9415 3.51806 14.3665 3.68286C14.8053 3.853 15.1763 4.08156 15.5471 4.45239C15.9178 4.82289 16.1458 5.19465 16.3167 5.63306C16.4805 6.05693 16.5929 6.54153 16.6262 7.25122C16.6582 7.96222 16.6663 8.18979 16.6663 10.0002C16.6663 11.8105 16.6582 12.0372 16.6262 12.7483C16.5929 13.4577 16.4805 13.9424 16.3167 14.3665C16.1458 14.8048 15.9179 15.1766 15.5471 15.5471C15.1768 15.9178 14.8056 16.1464 14.3674 16.3167C13.9433 16.4815 13.4579 16.5937 12.7483 16.6262C12.0372 16.6586 11.81 16.6663 9.99927 16.6663C8.18936 16.6663 7.96217 16.6586 7.25122 16.6262C6.54178 16.5937 6.05716 16.4815 5.63306 16.3167C5.19488 16.1464 4.8228 15.9179 4.45239 15.5471C4.0817 15.1766 3.85328 14.8049 3.68286 14.3665C3.51814 13.9426 3.40593 13.458 3.37329 12.7483C3.34107 12.0372 3.33325 11.8106 3.33325 10.0002C3.33325 8.18992 3.3415 7.96211 3.37329 7.25122C3.40523 6.54191 3.51764 6.05703 3.68286 5.63306C3.85365 5.19483 4.08172 4.82286 4.45239 4.45239C4.82295 4.08169 5.19556 3.85314 5.63403 3.68286C6.05772 3.51815 6.54201 3.4058 7.25122 3.37329C7.96217 3.34094 8.18986 3.33326 9.99927 3.33325Z"
+                                    fill="black" />
+                                <path
+                                    d="M9.40356 4.53638C9.58107 4.5361 9.77969 4.53638 10.0022 4.53638C11.7817 4.53638 11.9928 4.54252 12.6956 4.57446C13.3456 4.60419 13.6988 4.7127 13.9338 4.80396C14.2448 4.92476 14.4664 5.06973 14.6995 5.30298C14.9327 5.53626 15.0774 5.75853 15.1985 6.06958C15.2897 6.30431 15.3984 6.65712 15.428 7.30688C15.4599 8.00961 15.467 8.22112 15.467 10.0002C15.467 11.7788 15.4599 11.9902 15.428 12.6926C15.3983 13.3426 15.2897 13.6962 15.1985 13.9309C15.0777 14.2418 14.9327 14.4634 14.6995 14.6965C14.4663 14.9297 14.2448 15.0738 13.9338 15.1946C13.6991 15.2862 13.3456 15.3953 12.6956 15.425C11.9929 15.457 11.7817 15.4631 10.0022 15.4631C8.22211 15.4631 8.01058 15.457 7.30786 15.425C6.65785 15.395 6.30472 15.2858 6.06958 15.1946C5.75866 15.0738 5.53621 14.9298 5.30298 14.6965C5.06964 14.4632 4.92507 14.2412 4.80396 13.9299C4.71272 13.6952 4.60405 13.3424 4.57446 12.6926C4.54252 11.9898 4.53638 11.7785 4.53638 9.99829C4.53638 8.21799 4.54252 8.00772 4.57446 7.30493C4.60418 6.65538 4.71274 6.30261 4.80396 6.06763C4.92474 5.75664 5.06981 5.53426 5.30298 5.30103C5.53623 5.06777 5.75863 4.92309 6.06958 4.802C6.30458 4.71033 6.65785 4.60139 7.30786 4.57153C7.92279 4.54376 8.16118 4.53581 9.40356 4.53442V4.53638ZM10.0032 6.57739C8.11246 6.57739 6.57935 8.11051 6.57935 10.0012C6.57944 11.8919 8.11252 13.4241 10.0032 13.4241C11.8937 13.424 13.4259 11.8918 13.426 10.0012C13.426 8.11061 11.8937 6.57757 10.0032 6.57739ZM13.5588 5.6438C13.1173 5.64391 12.7591 6.00195 12.759 6.4436C12.759 6.88521 13.1173 7.2433 13.5588 7.24341C14.0005 7.24341 14.3586 6.88527 14.3586 6.4436C14.3585 6.00203 14.0004 5.6438 13.5588 5.6438Z"
+                                    fill="white" />
+                                <path
+                                    d="M10.0008 7.77856C11.228 7.77856 12.2231 8.77344 12.2231 10.0008C12.2231 11.228 11.228 12.2231 10.0008 12.2231C8.77344 12.2231 7.77856 11.228 7.77856 10.0008C7.77856 8.77344 8.77344 7.77856 10.0008 7.77856V7.77856Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="20" height="20" rx="10" fill="white" />
+                                <path
+                                    d="M7.82275 11.4587L7.6526 14.0078C7.9026 14.0078 8.01306 13.8934 8.1526 13.7578L9.35373 12.5898L11.8526 14.436C12.3125 14.6898 12.6444 14.5584 12.7589 14.0091L14.3994 6.27881C14.5673 5.60546 14.1427 5.30006 13.7027 5.49979L4.07024 9.21404C3.41273 9.47777 3.41656 9.84459 3.95039 10.008L6.4223 10.7796L12.1451 7.16915C12.4152 7.00532 12.6632 7.0934 12.4597 7.27402L7.8226 11.4586L7.82275 11.4587Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+
+
+
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -636,24 +718,113 @@
                 <h1 class="text-[40px] font-bold text-[#604B33] mulish "> What our client says</h1>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4 ">
+            <div class="testimonial-wrapper ">
+                <!-- testimonial cards -->
+                <div class="testimonial-item">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4 ">
 
-                <div class="flex w-full m-4 mb-20 md:w-1/2">
-                    <div class=" line flex  h-auto w-[100px]">
-                        <img width="100%" height="100%" src="./assets/img/Line+quotes.png" alt="">
-                    </div>
-                    <div class="flex  justify-center flex-col ml-2 ">
+                        <div class="flex w-full m-4 mb-20 md:w-1/2">
+                            <div class=" line flex  h-auto w-[100px]">
+                                <img width="100%" height="100%" src="./assets/img/Line+quotes.png" alt="">
+                            </div>
+                            <div class="flex  justify-center flex-col ml-2 ">
 
-                        <p class="text-[20px] text-black inter my-4 mr-2 ">Adipiscing nam neque hendrerit nec
-                            pellentesque diam a. Varius quisque odio mauris lectus consequat sed. Pretium purus feugiat
-                            volutpat pellentesque.Potenti porta mauris nec vulputate. </p>
-                        <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Kirsten Gutierrez</h3>
-                        <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Founder K&G Company</p>
+                                <p class="text-[20px] text-black inter my-4 mr-2 ">Adipiscing nam neque hendrerit nec
+                                    pellentesque diam a. Varius quisque odio mauris lectus consequat sed. Pretium purus
+                                    feugiat
+                                    volutpat pellentesque.Potenti porta mauris nec vulputate. </p>
+                                <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Kirsten
+                                    Gutierrez
+                                </h3>
+                                <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Founder K&G Company</p>
+                            </div>
+                        </div>
+                        <div
+                            class="testimonial-image w-full md:w-1/2 flex justify-center items-center w-[450px] cover bg-red-400">
+                            <img src="./assets/img/client.png" width="100%" height="100%" alt="">
+                        </div>
                     </div>
                 </div>
-                <div
-                    class="testimonial-image w-full md:w-1/2 flex justify-center items-center w-[450px] cover bg-red-400">
-                    <img src="./assets/img/client.png" width="100%" height="100%" alt="">
+
+                <!-- testimonial cards -->
+                <div class="testimonial-item">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4 ">
+
+                        <div class="flex w-full m-4 mb-20 md:w-1/2">
+                            <div class=" line flex  h-auto w-[100px]">
+                                <img width="100%" height="100%" src="./assets/img/Line+quotes.png" alt="">
+                            </div>
+                            <div class="flex  justify-center flex-col ml-2 ">
+
+                                <p class="text-[20px] text-black inter my-4 mr-2 ">Adipiscing nam neque hendrerit nec
+                                    pellentesque diam a. Varius quisque odio mauris lectus consequat sed. Pretium purus
+                                    feugiat
+                                    volutpat pellentesque.Potenti porta mauris nec vulputate. </p>
+                                <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Kirsten
+                                    Gutierrez
+                                </h3>
+                                <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Founder K&G Company</p>
+                            </div>
+                        </div>
+                        <div
+                            class="testimonial-image w-full md:w-1/2 flex justify-center items-center w-[450px] cover bg-red-400">
+                            <img src="./assets/img/client.png" width="100%" height="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- testimonial cards -->
+                <div class="testimonial-item">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4 ">
+
+                        <div class="flex w-full m-4 mb-20 md:w-1/2">
+                            <div class=" line flex  h-auto w-[100px]">
+                                <img width="100%" height="100%" src="./assets/img/Line+quotes.png" alt="">
+                            </div>
+                            <div class="flex  justify-center flex-col ml-2 ">
+
+                                <p class="text-[20px] text-black inter my-4 mr-2 ">Adipiscing nam neque hendrerit nec
+                                    pellentesque diam a. Varius quisque odio mauris lectus consequat sed. Pretium purus
+                                    feugiat
+                                    volutpat pellentesque.Potenti porta mauris nec vulputate. </p>
+                                <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Kirsten
+                                    Gutierrez
+                                </h3>
+                                <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Founder K&G Company</p>
+                            </div>
+                        </div>
+                        <div
+                            class="testimonial-image w-full md:w-1/2 flex justify-center items-center w-[450px] cover bg-red-400">
+                            <img src="./assets/img/client.png" width="100%" height="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- testimonial cards -->
+                <div class="testimonial-item">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4 ">
+
+                        <div class="flex w-full m-4 mb-20 md:w-1/2">
+                            <div class=" line flex  h-auto w-[100px]">
+                                <img width="100%" height="100%" src="./assets/img/Line+quotes.png" alt="">
+                            </div>
+                            <div class="flex  justify-center flex-col ml-2 ">
+
+                                <p class="text-[20px] text-black inter my-4 mr-2 ">Adipiscing nam neque hendrerit nec
+                                    pellentesque diam a. Varius quisque odio mauris lectus consequat sed. Pretium purus
+                                    feugiat
+                                    volutpat pellentesque.Potenti porta mauris nec vulputate. </p>
+                                <h3 class="text-[24px] text-[#604B33] font-bold text-black mulish mb-3">Kirsten
+                                    Gutierrez
+                                </h3>
+                                <p class="text-[16px] font-semibold inter text-[#94744E] mb-3">Founder K&G Company</p>
+                            </div>
+                        </div>
+                        <div
+                            class="testimonial-image w-full md:w-1/2 flex justify-center items-center w-[450px] cover bg-red-400">
+                            <img src="./assets/img/client.png" width="100%" height="100%" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -747,105 +918,113 @@
 
             <!-- Blogs -->
             <!-- Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 mx-4 ">
+            <div class="blog-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 mx-4 ">
                 <!-- Card -->
-                <div class="flex flex-col  mt-7 w-full mx-auto">
+                <div class="single-blog-item">
+                    <div class="flex flex-col  mt-7 w-full mx-auto">
 
-                    <div class="blog-pic mb-2 w-full min-h-auto overflow-hidden relative">
-                        <img width="100%" height="100%" src="./assets/img/Img+text.png" class="object-cover"
-                            alt="blog-pic">
-                        <h3 class="absolute left-5 bottom-5 text-white"> Julio Jefferson</h3>
+                        <div class="blog-pic mb-2 w-full min-h-auto overflow-hidden relative">
+                            <img width="100%" height="100%" src="./assets/img/Img+text.png" class="object-cover"
+                                alt="blog-pic">
+                            <h3 class="absolute left-5 bottom-5 text-white"> Julio Jefferson</h3>
 
+                        </div>
+
+                        <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
+                        <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3 grow">Crime, civil law, justice and
+                            rights
+
+                        </h3>
+
+                        <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
+                            href="#">Read
+                            More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                            </span></a>
                     </div>
-
-                    <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
-                    <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3 grow">Crime, civil law, justice and
-                        rights
-
-                    </h3>
-
-                    <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
-                        href="#">Read
-                        More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="size-4">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </span></a>
                 </div>
 
                 <!-- Card -->
-                <div class="flex flex-col  mt-7 w-full  mx-auto">
+                <div class="single-blog-item">
+                    <div class="flex flex-col  mt-7 w-full  mx-auto">
 
-                    <div class="blog-pic mb-2 w-full h-auto overflow-hidden relative">
-                        <img width="100%" height="100%" src="./assets/img/Img+text.png" class="object-cover"
-                            alt="blog-pic">
-                        <h3 class="absolute left-5 bottom-5 text-white"> Julio Jefferson</h3>
+                        <div class="blog-pic mb-2 w-full h-auto overflow-hidden relative">
+                            <img width="100%" height="100%" src="./assets/img/Img+text.png" class="object-cover"
+                                alt="blog-pic">
+                            <h3 class="absolute left-5 bottom-5 text-white"> Julio Jefferson</h3>
 
+                        </div>
+
+                        <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
+                        <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3 grow">Crime, civil law, justice and
+                            rights
+                        </h3>
+
+                        <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
+                            href="#">Read
+                            More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                            </span></a>
                     </div>
-
-                    <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
-                    <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3 grow">Crime, civil law, justice and
-                        rights
-                    </h3>
-
-                    <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
-                        href="#">Read
-                        More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="size-4">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </span></a>
                 </div>
 
                 <!-- Card -->
-                <div class="flex flex-col  mt-7 w-full   mx-auto">
+                <div class="single-blog-item">
+                    <div class="flex flex-col  mt-7 w-full   mx-auto">
 
-                    <div class="blog-pic mb-2 w-full h-[300px] overflow-hidden relative">
-                        <img width="100%" height="100%" src="./assets/img/attorney-pic.png" class="object-cover"
-                            alt="blog-pic">
-                        <h3 class="absolute left-5 bottom-5 text-white"> Julio Jefferson</h3>
+                        <div class="blog-pic mb-2 w-full h-[300px] overflow-hidden relative">
+                            <img width="100%" height="100%" src="./assets/img/attorney-pic.png" class="object-cover"
+                                alt="blog-pic">
+                            <h3 class="absolute left-5 bottom-5 text-white"> Julio Jefferson</h3>
 
+                        </div>
+
+                        <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
+                        <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3 grow">Crime, civil law, justice and
+                            rights
+                        </h3>
+
+                        <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
+                            href="#">Read
+                            More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                            </span></a>
                     </div>
-
-                    <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
-                    <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3 grow">Crime, civil law, justice and
-                        rights
-                    </h3>
-
-                    <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
-                        href="#">Read
-                        More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="size-4">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </span></a>
                 </div>
                 <!-- Card -->
-                <div class="flex flex-col  mt-7 w-full   mx-auto">
+                <div class="single-blog-item">
+                    <div class="flex flex-col  mt-7 w-full   mx-auto">
 
-                    <div class="blog-pic mb-2 w-full h-[300px] overflow-hidden relative">
-                        <img width="100%" height="100%" src="./assets/img/attorney-pic.png" class="object-cover"
-                            alt="blog-pic">
-                        <h3 class="absolute left-5 bottom-5 text-white"> Julio Jefferson</h3>
+                        <div class="blog-pic mb-2 w-full h-[300px] overflow-hidden relative">
+                            <img width="100%" height="100%" src="./assets/img/attorney-pic.png" class="object-cover"
+                                alt="blog-pic">
+                            <h3 class="absolute left-5 bottom-5 text-white"> Julio Jefferson</h3>
 
+                        </div>
+
+                        <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
+                        <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3 grow">Crime, civil law, justice and
+                            rights
+                        </h3>
+
+                        <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
+                            href="#">Read
+                            More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                            </span></a>
                     </div>
-
-                    <p class="text-[16px] font-semibold inter text-black mb-3">Novermber 9, 2023</p>
-                    <h3 class="text-[20px] text-[#604B33] font-bold  mulish mb-3 grow">Crime, civil law, justice and
-                        rights
-                    </h3>
-
-                    <a class="inline-flex items-center gap-1 text-black font-semibold text-[12px] uppercase"
-                        href="#">Read
-                        More <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="size-4">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </span></a>
                 </div>
 
 
@@ -951,9 +1130,9 @@
 
                     <div class="flex flex-col gap-4 text-base poppins text-[#BFBCB2]  leading-[16px]">
                         <a class="hover:text-white" href="">Home</a>
-                        <a class="hover:text-white" href="">Services</a>
-                        <a class="hover:text-white" href="">Our About us</a>
-                        <a class="hover:text-white" href="">Contact us</a>
+                        <a class="hover:text-white" href="#service-section">Services</a>
+                        <a class="hover:text-white" href="">About us</a>
+                        <a class="hover:text-white" href="#form-section">Contact us</a>
                     </div>
                 </div>
 
@@ -985,10 +1164,10 @@
                     </p>
 
                     <div class="flex flex-col gap-4 text-base poppins text-[#BFBCB2]  leading-[16px]">
-                        <a class="hover:text-white" href="">Banking and Finance</a>
-                        <a class="hover:text-white" href="">Business Law</a>
-                        <a class="hover:text-white" href="">Real Estate</a>
-                        <a class="hover:text-white" href="">Family Law</a>
+                        <a class="hover:text-white" href="#blog-section">Banking and Finance</a>
+                        <a class="hover:text-white" href="#blog-section">Business Law</a>
+                        <a class="hover:text-white" href="#blog-section">Real Estate</a>
+                        <a class="hover:text-white" href="#blog-section">Family Law</a>
                     </div>
                 </div>
             </div>
@@ -1002,7 +1181,13 @@
             </p>
         </div>
     </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="assets/js/script.js"></script>
 </body>
-<script src="assets/js/script.js"></script>
+
 
 </html>
